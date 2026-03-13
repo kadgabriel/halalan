@@ -23,16 +23,6 @@
 		?>
 		<?php foreach ($usc_position['parties'] as $key => $usc_party): ?>
 			<div class="notes" style="float: left; width: <?php echo $column; ?>px;">
-			<h2 class="opener pointer"><?php echo $usc_party['party']; ?></h2>
-			<?php
-				$str = $usc_party['party'] . '-' . $usc_position['position'] . '-' . $usc_position['maximum'];
-				$str = str_replace(' ', '-', $str);
-			?>
-			<div id="partyDialog-<?php echo $str; ?>" title="<?php echo $usc_party['party']; ?>">
-				<p>
-					<?php echo nl2br($usc_party['description']); ?>
-				</p>
-			</div>
 			<!-- start -->
 			<table cellpadding="0" cellspacing="0" border="0" class="form_table highlight delegateEvents2">
 				<?php if (empty($usc_party['candidates'])): ?>
@@ -53,31 +43,13 @@
 						?>
 						<tr>
 							<td>
+								<?php echo img(array('src' => 'public/uploads/pictures/' . $usc_candidate['picture'], 'alt' => 'picture')); ?>
+							</td>
+							<td>
 								<?php echo $name; ?>
 							</td>
 							<td class="w5">
-								<?php echo img(array('src' => 'public/images/info.png', 'alt' => 'info', 'class' => 'pointer', 'title' => 'More info')); ?>
-							</td>
-						</tr>
-						<tr class="details">
-							<td colspan="2">
-								<div style="display:none;" class="details">
-								<?php if ( ! empty($usc_candidate['picture'])): ?>
-									<div style="float:left;padding-right:5px;">
-										<?php echo img(array('src' => 'public/uploads/pictures/' . $usc_candidate['picture'], 'alt' => 'picture')); ?>
-									</div>
-								<?php endif; ?>
-								<div style="float:left;">
-									Name: <?php echo $name; ?><br />
-									Party: <?php echo (isset($usc_party['party']) && ! empty($usc_party['party'])) ? $usc_party['party'] . ( ! empty($usc_party['alias']) ? ' (' . $usc_party['alias'] . ')' : '') : 'none'; ?>
-								</div>
-								<div class="clear"></div>
-								<?php if ( ! empty($usc_candidate['description'])): ?>
-									<div><br />
-										<?php echo nl2br($usc_candidate['description']); ?>
-									</div>
-								<?php endif; ?>
-								</div>
+								<?php //echo img(array('src' => 'public/images/info.png', 'alt' => 'info', 'class' => 'pointer', 'title' => 'More info')); ?>
 							</td>
 						</tr>
 					<?php endforeach; ?>

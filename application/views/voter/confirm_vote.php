@@ -17,7 +17,6 @@
 		?>
 		<?php foreach ($usc_position['parties'] as $key => $usc_party): ?>
 			<div class="notes" style="float: left; width: <?php echo $column; ?>px;">
-			<h2><?php echo $usc_party['party']; ?></h2>
 			<!-- start -->
 			<table cellpadding="0" cellspacing="0" border="0" class="form_table delegateEvents2">
 				<?php if (empty($usc_party['candidates'])): ?>
@@ -60,35 +59,10 @@
 								?>
 							</td>
 							<td>
-								<?php echo $name; ?>
+								<?php echo img(array('src' => 'public/uploads/pictures/' . $usc_candidate['picture'], 'alt' => 'picture')); ?>
 							</td>
-							<?php if ($settings['show_candidate_details']): ?>
-								<td class="w5">
-									<?php echo img(array('src' => 'public/images/info.png', 'alt' => 'info', 'class' => 'pointer', 'title' => 'More info')); ?>
-								</td>
-							<?php endif; ?>
-						</tr>
-						<tr class="details">
-							<td colspan="3">
-							<?php if ($settings['show_candidate_details']): ?>
-								<div style="display:none;" class="details">
-								<?php if ( ! empty($usc_candidate['picture'])): ?>
-									<div style="float:left;padding-right:5px;">
-										<?php echo img(array('src' => 'public/uploads/pictures/' . $usc_candidate['picture'], 'alt' => 'picture')); ?>
-									</div>
-								<?php endif; ?>
-								<div style="float:left;">
-									Name: <?php echo $name; ?><br />
-									Party: <?php echo (isset($usc_party['party']) && ! empty($usc_party['party'])) ? $usc_party['party'] . ( ! empty($usc_party['alias']) ? ' (' . $usc_party['alias'] . ')' : '') : 'none'; ?>
-								</div>
-								<div class="clear"></div>
-								<?php if ( ! empty($usc_candidate['description'])): ?>
-									<div><br />
-										<?php echo nl2br($usc_candidate['description']); ?>
-									</div>
-								<?php endif; ?>
-								</div>
-							<?php endif; ?>
+							<td>
+								<label><?php echo $name; ?></label>
 							</td>
 						</tr>
 					<?php endforeach; ?>
@@ -129,7 +103,7 @@
 								'disabled="disabled"'
 								);
 						?>
-						ABSTAIN
+						<label>ABSTAIN</label>
 					</td>
 				</tr>
 			</table>
