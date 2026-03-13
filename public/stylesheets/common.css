@@ -180,7 +180,9 @@ img {
 #content .notes a:hover {
     color: #666666;
   }
-
+#content .notes label, #content .paging label{
+    font-size: medium;
+}
 
 #content .form_table {
     margin-bottom: 15px;
@@ -361,8 +363,9 @@ div.position {
     background-color: #EEEEEE;
     padding: 5px;
     margin: 0px 0px 15px;
-    font-size: small;
+    font-size: large;
     text-align:center;
+    font-weight: bold;
   }
 
 /* Widths */
@@ -407,4 +410,9 @@ div.position {
 
 .h25 {
     min-height: 200px;
+}
+
+
+.divider{
+    margin-top: 30px;
 }

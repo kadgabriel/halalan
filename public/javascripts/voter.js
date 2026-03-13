@@ -1,7 +1,7 @@
 
 /* jQuery event handlers */
 
-var set_language = 'english';
+var set_language = 'filipino';
 
 var language = [];
 language['english'] = [];
