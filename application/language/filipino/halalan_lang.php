@@ -58,6 +58,7 @@ $lang['halalan_gate_statistics_label'] = 'STATISTICS';
 $lang['halalan_voter_common_not_running_one'] = 'Hindi pa tumatakbo ang eleksyon.';
 $lang['halalan_voter_common_not_running_two'] = 'Hindi ka maaaring makapasok ngayon.';
 // index
+$lang['halalan_voter_index_title'] = 'Home';
 // vote
 $lang['halalan_voter_vote_title'] = 'Pagboto';
 $lang['halalan_voter_vote_no_candidates'] = 'Walang mga kandidato.';
@@ -77,6 +78,16 @@ $lang['halalan_voter_confirm_vote_not_pin'] = 'Mali ang nilagay na PIN';
 $lang['halalan_voter_logout_title'] = 'Logout';
 // votes
 $lang['halalan_voter_votes_title'] = 'Mga Boto';
+$lang['halalan_voter_votes_image_trail_disabled'] = 'Ang pag-generate ng image trail ay naka-disable.';
+$lang['halalan_voter_votes_image_trail_not_found'] = 'Hindi makita ang Image trail.';
+
+// views/voter/index.php
+$lang['halalan_voter_index_label'] = 'Mga Eleksyon';
+$lang['halalan_voter_index_election'] = 'Eleksyon';
+$lang['halalan_voter_index_voted'] = 'Voted';
+$lang['halalan_voter_index_status'] = 'Status';
+$lang['halalan_voter_index_results'] = 'Resulta';
+$lang['halalan_voter_index_no_elections'] = 'Walang eleksyon na nakita.';
 
 // views/voter/vote.php
 $lang['halalan_voter_vote_reminder'] = 'Kailangan pang kumpirmahin ang iyong mga boto sa susunod na pahina.';
