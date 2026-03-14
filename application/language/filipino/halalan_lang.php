@@ -5,9 +5,12 @@ $lang['halalan_common_unauthorized'] = 'Kailangang nakapasok ka para makita ang 
 
 // common to views
 $lang['halalan_common_message_box'] = 'Halalan Message Box';
+$lang['halalan_common_view'] = 'Tingnan';
 $lang['halalan_common_edit'] = 'Baguhin';
 $lang['halalan_common_delete'] = 'Tanggalin';
 $lang['halalan_common_action'] = 'Aksyon';
+$lang['halalan_common_actions'] = 'Aksyon';
+$lang['halalan_common_id'] = 'ID';
 
 // controllers/gate.php
 // common to voter_login and admin_login
@@ -22,6 +25,9 @@ $lang['halalan_gate_voter_currently_logged_in'] = 'Ang botante ay kasalukuyang n
 $lang['halalan_gate_admin_title'] = 'Admin Login';
 // admin_login
 // logout
+// results
+$lang['halalan_gate_results_title'] = 'Resulta';
+$lang['halalan_gate_results_unavailable'] = 'Wala pa ang mga resulta ng eleksyon.';
 // result
 $lang['halalan_gate_result_title'] = 'Resulta';
 $lang['halalan_gate_result_unavailable'] = 'Wala pa ang mga resulta ng eleksyon.';
@@ -46,12 +52,22 @@ $lang['halalan_gate_admin_login_button'] = 'Login';
 
 // views/gate/result.php
 $lang['halalan_gate_result_label'] = 'RESULTA';
+$lang['halalan_gate_results_label'] = 'RESULTA';
+$lang['halalan_gate_results_no_elections'] = 'Wala pang resulta ang mga eleskyon.';
 $lang['halalan_gate_result_no_candidates'] = 'Walang mga kandidato.';
+$lang['halalan_gate_results_no_candidates'] = 'Walang mga kandidato.';
 $lang['halalan_gate_result_submit_button'] = 'Update Page';
+$lang['halalan_gate_results_submit_button'] = 'Update Page';
 $lang['halalan_gate_result_reminder'] = 'Select at least one position then press <em>Update Page</em>.';
+$lang['halalan_gate_results_reminder'] = 'Select at least one position then press <em>Update Page</em>.';
+
 // views/gate/statistics.php
 $lang['halalan_gate_statistics_label'] = 'STATISTICS';
 
+// views/gate/ballots.php
+$lang['halalan_gate_ballots_label'] = 'MGA BALOTA';
+$lang['halalan_gate_ballots_reminder'] = 'Mamili ng block na nais tignan ang balota.';
+$lang['halalan_gate_ballots_no_candidates'] = 'Walang mga kandidato.';
 
 // controllers/voter.php
 // commont to all functions
@@ -84,7 +100,7 @@ $lang['halalan_voter_votes_image_trail_not_found'] = 'Hindi makita ang Image tra
 // views/voter/index.php
 $lang['halalan_voter_index_label'] = 'Mga Eleksyon';
 $lang['halalan_voter_index_election'] = 'Eleksyon';
-$lang['halalan_voter_index_voted'] = 'Voted';
+$lang['halalan_voter_index_voted'] = 'Nabotohan';
 $lang['halalan_voter_index_status'] = 'Status';
 $lang['halalan_voter_index_results'] = 'Resulta';
 $lang['halalan_voter_index_no_elections'] = 'Walang eleksyon na nakita.';
@@ -108,14 +124,15 @@ $lang['halalan_voter_logout_message'] = '<p>Naitala na ang iyong balota. Salamat
 
 // views/voter/votes.php
 $lang['halalan_voter_votes_no_candidates'] = 'Walang natagpuang kandidato.';
-$lang['halalan_voter_votes_submit_button'] = 'Generate Page for Printing';
+$lang['halalan_voter_votes_print_button'] = 'Generate Page upang ma-print';
+$lang['halalan_voter_votes_submit_button'] = 'Generate Page upang ma-print';
+$lang['halalan_voter_votes_download_button'] = 'I-download ang na-generate na Image Trail';
 
 // controllers/admin.php
-// commont to all functions
 $lang['halalan_admin_common_running_one'] = 'Tumatakbo na ang eleksyon.';
 $lang['halalan_admin_common_running_two'] = 'Hindi mo maaaring galawin ang eleksyon ngayon.';
 // index
-// home
+// controllers/admin/home.php
 $lang['halalan_admin_home_title'] = 'Home';
 // do_edit_options
 $lang['halalan_admin_edit_option_success'] = 'Matagumpay na napalitan ang opsyon.';
@@ -126,10 +143,12 @@ $lang['halalan_admin_regenerate_not_exists'] = 'Walang ganitong botante.';
 $lang['halalan_admin_regenerate_invalid_email'] = 'Hindi katanggap-tanggap ang email.';
 $lang['halalan_admin_regenerate_success'] = 'Tagumpay.';
 $lang['halalan_admin_regenerate_email_success'] = 'Matagumpay na naipadala ang impormasyon para sa login.';
+// elections
+$lang['halalan_admin_elections_title'] = 'Manage Elections';
 // voters
 $lang['halalan_admin_voters_title'] = 'Manage Voters';
 // parties
-$lang['halalan_admin_parties_title'] = 'Manage Parties';
+$lang['halalan_admin_parties_title'] = 'Maage Partiens';
 // positions
 $lang['halalan_admin_positions_title'] = 'Manage Positions';
 // candidates
@@ -165,6 +184,10 @@ $lang['halalan_admin_voter_email_success'] = 'Matagumpay na naipadala ang imporm
 $lang['halalan_admin_add_voter_success'] = 'Matagumpay na naidagdag ang botante.';
 // do_edit_voter
 $lang['halalan_admin_edit_voter_success'] = 'Matagumpay na nabago ang botante.';
+$lang['halalan_admin_voter_dependencies'] = 'Ang botante ay ginagamit. Ang Block field ay hindi maaaring baguhin.';
+$lang['halalan_admin_voter_in_running_election'] = 'Ang botante sa isang block sa tumatakbong eleksyon ay hindi maaaring baguhin.';
+$lang['halalan_admin_voter_running_election'] = 'Ang botante ay hindi maaaring idagdag sa isang block sa tumatakbong eleksyon.';
+$lang['halalan_admin_generate_title'] = 'Generate Passwords';
 // common to do_add_party and do_edit_party
 $lang['halalan_admin_party_no_party'] = 'Kinakailangan ang partido.';
 $lang['halalan_admin_party_exists'] = 'Mayroon nang ganitong partido.';
@@ -172,6 +195,9 @@ $lang['halalan_admin_party_exists'] = 'Mayroon nang ganitong partido.';
 $lang['halalan_admin_add_party_success'] = 'Matagumpay na naidagdag ang partido.';
 // do_edit_party
 $lang['halalan_admin_edit_party_success'] = 'Matagumpay na nabago ang partido.';
+$lang['halalan_admin_party_dependencies'] = 'Ang partido ay ginagamit. Ang field ng napiling Eleksyon ay hindi maaaring baguhin.';
+$lang['halalan_admin_party_in_running_election'] = 'Ang partido sa tumatakbong eleksyon ay hindi maaaring baguhin.';
+$lang['halalan_admin_party_running_election'] = 'Ang partido ay hindi maaaring idagdag sa tumatakbong eleksyon.';
 // common to do_add_position and do_edit_position
 $lang['halalan_admin_position_no_position'] = 'Kinakailangan ang posisyon.';
 $lang['halalan_admin_position_no_maximum'] = 'Kinakailangan ang dami ng maaaring iboto.';
@@ -183,6 +209,10 @@ $lang['halalan_admin_position_ordinality_not_digit'] = 'Ang posisyon sa pagkakas
 $lang['halalan_admin_add_position_success'] = 'Matagumpay na nadagdag ang posisyon.';
 // do_edit_position
 $lang['halalan_admin_edit_position_success'] = 'Matagumpay na nabago ang posisyon.';
+$lang['halalan_admin_position_dependencies'] = 'Ang posisyon ay ginagamit. Ang field ng napiling Eleksyon ay hindi maaaring baguhin.';
+$lang['halalan_admin_position_in_running_election'] = 'Ang posisyon sa tumatakbong eleksyon ay hindi maaaring baguhin.';
+$lang['halalan_admin_position_running_election'] = 'Ang posisyon ay hindi maaaring idagdag sa tumatakbong eleksyon.';
+
 // common to do_add_candidate and do_edit_candidate
 $lang['halalan_admin_candidate_no_first_name'] = 'Kinakailangan ang pangalan.';
 $lang['halalan_admin_candidate_no_last_name'] = 'Kinakailangang ang apelyido.';
@@ -192,6 +222,9 @@ $lang['halalan_admin_candidate_exists'] = 'Mayroon nang ganitong kandidato.';
 $lang['halalan_admin_add_candidate_success'] = 'Matagumpay na naidagdag ang kandidato.';
 // do_edit_candidate
 $lang['halalan_admin_edit_candidate_success'] = 'Matagumpay na nabago ang kandidato.';
+$lang['halalan_admin_candidate_dependencies'] = 'Ang kandidato ay ginagamit. Ang Election at Position fields ay hindi maaaring baguhin.';
+$lang['halalan_admin_candidate_in_running_election'] = 'Ang kandidato sa tumatakbong eleksyon ay hindi maaaring baguhin.';
+$lang['halalan_admin_candidate_running_election'] = 'Ang kandidato ay hindi maaaring idagdag sa tumatakbong eleksyon.';
 // import
 $lang['halalan_admin_import_title'] = 'Import Voters';
 // do_import
@@ -201,12 +234,36 @@ $lang['halalan_admin_import_reminder'] = 'Maaaring gamitin ang Export Voters sa 
 $lang['halalan_admin_import_reminder_too'] = ' at pin.';
 // export
 $lang['halalan_admin_export_title'] = 'Export Voters';
+// elections
+$lang['halalan_admin_delete_election_in_use'] = 'Ang eleksyon na ginagamit ay hindi maaaring tanggalin.';
+$lang['halalan_admin_delete_election_running'] = 'Ang tumatakbong eleksyon ay hindi maaaring tanggalin.';
+$lang['halalan_admin_delete_election_success'] = 'Matagumpay na natanggal ang eleksyon.';
+$lang['halalan_admin_edit_election_title'] = 'Baguhin ang Eleksyon';
+$lang['halalan_admin_add_election_title'] = 'Magdagdag ng Eleksyon';
+$lang['halalan_admin_add_election_success'] = 'Matagumpay na naidagdag ang eleksyon.';
+$lang['halalan_admin_edit_election_running'] = 'Ang tumatakbong eleksyon ay hindi maaaring baguhin.';
+$lang['halalan_admin_edit_election_success'] = 'Matagumpay na nabago ang eleksyon.';
+$lang['halalan_admin_options_election_success'] = 'Matagumpay na nabago ang mga opsyon ng eleksyon.';
+$lang['halalan_admin_options_election_restricted'] = 'Hindi mo pag-aari ang napiling eleksyon.';
+// blocks
+$lang['halalan_admin_blocks_title'] = 'Manage Blocks';
+$lang['halalan_admin_delete_block_in_use'] = 'Ang block na ginagamit ay hindi maaaring tanggalin.';
+$lang['halalan_admin_delete_block_success'] = 'Matagumpay na natanggal ang block.';
+$lang['halalan_admin_edit_block_title'] = 'Baguhin ang Block';
+$lang['halalan_admin_add_block_title'] = 'Magdagdag ng Block';
+$lang['halalan_admin_block_exists'] = 'Mayroon nang ganitong block.';
+$lang['halalan_admin_block_dependencies'] = 'Ang block ay ginagamit. Ang Election / Position fields ay hindi maaaring baguhin.';
+$lang['halalan_admin_add_block_success'] = 'Matagumpay na naidagdag ang block.';
+$lang['halalan_admin_edit_block_success'] = 'Matagumpay na nabago ang block.';
+$lang['halalan_admin_block_in_running_election'] = 'Ang block sa tumatakbong eleksyon ay hindi maaaring baguhin.';
+$lang['halalan_admin_block_running_election'] = 'Ang block ay hindi maaaring idagdag sa tumatakbong eleksyon.';
 
 
 // views/admin/home.php
 $lang['halalan_admin_home_left_label'] = 'Manage';
 $lang['halalan_admin_home_manage_question'] = 'Ano ang gusto mong gawin?';
 $lang['halalan_admin_home_manage_candidates'] = 'Manage Candidates';
+$lang['halalan_admin_home_manage_elections'] = 'Manage Elections';
 $lang['halalan_admin_home_manage_parties'] = 'Manage Parties';
 $lang['halalan_admin_home_manage_positions'] = 'Manage Positions';
 $lang['halalan_admin_home_manage_voters'] = 'Manage Voters';
@@ -222,7 +279,8 @@ $lang['halalan_admin_home_running'] = 'Bukas';
 $lang['halalan_admin_home_not_running'] = 'Sarado';
 $lang['halalan_admin_home_results'] = 'Resulta';
 $lang['halalan_admin_home_publish'] = 'Ipahayag ang resulta?';
-$lang['halalan_admin_home_submit'] = 'Save';
+$lang['halalan_admin_home_submit'] = 'Regenerate';
+$lang['halalan_admin_home_reset'] = 'Reset Halalan Database';
 
 // views/admin/voters.php
 $lang['halalan_admin_voters_label'] = 'Mga Botante';
@@ -238,6 +296,7 @@ $lang['halalan_admin_voter_email'] = 'Email';
 $lang['halalan_admin_voter_username'] = 'Username';
 $lang['halalan_admin_voter_first_name'] = 'Pangalan';
 $lang['halalan_admin_voter_last_name'] = 'Apelyido';
+$lang['halalan_admin_voter_block'] = 'Block';
 $lang['halalan_admin_voter_general_positions'] = 'Pangkalahatang Posisyon';
 $lang['halalan_admin_voter_no_general_positions'] = 'Walang mga pangkalahatang posisyon.';
 $lang['halalan_admin_voter_specific_positions'] = 'Piling Posisyon';
@@ -261,6 +320,7 @@ $lang['halalan_admin_parties_add'] = 'Magdagdag ng partido';
 // views/admin/party.php
 $lang['halalan_admin_add_party_label'] = 'Magdagdag ng detalye ng partido';
 $lang['halalan_admin_edit_party_label'] = 'Baguhin ang detalye ng partido';
+$lang['halalan_admin_party_election'] = 'Eleksyon';
 $lang['halalan_admin_party_party'] = 'Partido';
 $lang['halalan_admin_party_alias'] = 'Alias';
 $lang['halalan_admin_party_description'] = 'Description';
@@ -278,6 +338,7 @@ $lang['halalan_admin_positions_add'] = 'Magdagdag ng posisyon';
 // views/admin/position.php
 $lang['halalan_admin_add_position_label'] = 'Magdagdag ng detalye ng posisyon';
 $lang['halalan_admin_edit_position_label'] = 'Baguhin ang detalye ng posisyon';
+$lang['halalan_admin_position_election'] = 'Eleksyon';
 $lang['halalan_admin_position_position'] = 'Posisyon';
 $lang['halalan_admin_position_description'] = 'Description';
 $lang['halalan_admin_position_maximum'] = 'Dami ng pwedeng iboto';
@@ -302,6 +363,7 @@ $lang['halalan_admin_candidate_last_name'] = 'Apelyido';
 $lang['halalan_admin_candidate_alias'] = 'Alias';
 $lang['halalan_admin_candidate_description'] = 'Description';
 $lang['halalan_admin_candidate_party'] = 'Partido';
+$lang['halalan_admin_candidate_election'] = 'Eleksyon';
 $lang['halalan_admin_candidate_position'] = 'Posisyon';
 $lang['halalan_admin_candidate_picture'] = 'Larawan';
 $lang['halalan_admin_add_candidate_submit'] = 'Idagdag ang kandidato';
@@ -309,6 +371,7 @@ $lang['halalan_admin_edit_candidate_submit'] = 'Baguhin ang kandidato';
 
 // views/admin/import.php
 $lang['halalan_admin_import_label'] = 'Import Voters';
+$lang['halalan_admin_import_block'] = 'Block';
 $lang['halalan_admin_import_general_positions'] = 'Pangkalahatang Posisyon';
 $lang['halalan_admin_import_no_general_positions'] = 'Walang posisyong natagpuan.';
 $lang['halalan_admin_import_specific_positions'] = 'Piling Posisyon';
@@ -322,6 +385,7 @@ $lang['halalan_admin_import_submit'] = 'Import';
 
 // views/admin/export.php
 $lang['halalan_admin_export_label'] = 'Export Voters';
+$lang['halalan_admin_export_block'] = 'Block';
 $lang['halalan_admin_export_password'] = 'Isasama ang password?';
 $lang['halalan_admin_export_password_description'] = 'para sa malawakang paggawa ng password';
 $lang['halalan_admin_export_pin'] = 'Isasama ang PIN?';
@@ -331,4 +395,48 @@ $lang['halalan_admin_export_votes_description'] = 'para sa manual na pagbilang n
 $lang['halalan_admin_export_status'] = 'Isasama ang status?';
 $lang['halalan_admin_export_status_description'] = 'para malaman kung sino ang nakaboto na o hindi pa';
 $lang['halalan_admin_export_submit'] = 'Export';
+
+// views/admin/generate.php
+$lang['halalan_admin_generate_label'] = 'Generate Passwords';
+$lang['halalan_admin_generate_block'] = 'Block';
+$lang['halalan_admin_generate_submit'] = 'Generate';
+
+// views/admin/elections.php
+$lang['halalan_admin_elections_label'] = 'Manage Elections';
+$lang['halalan_admin_elections_election'] = 'Eleksyon';
+$lang['halalan_admin_elections_status'] = 'Status';
+$lang['halalan_admin_elections_results'] = 'Resulta';
+$lang['halalan_admin_elections_no_elections'] = 'Walang eleksyon na nakita.';
+$lang['halalan_admin_elections_add'] = 'Magdagdag ng Eleksyon';
+
+// views/admin/election.php
+$lang['halalan_admin_add_election_label'] = 'Magdagdag ng detalye ng eleksyon';
+$lang['halalan_admin_edit_election_label'] = 'Baguhin ang detalye ng eleksyon';
+$lang['halalan_admin_election_election'] = 'Eleksyon';
+$lang['halalan_admin_election_email'] = 'Email';
+$lang['halalan_admin_election_last_name'] = 'Apelyido';
+$lang['halalan_admin_election_first_name'] = 'Pangalan';
+$lang['halalan_admin_election_username'] = 'Username';
+$lang['halalan_admin_election_parent'] = 'Parent';
+$lang['halalan_admin_election_notes'] = 'Notes';
+$lang['halalan_admin_add_election_submit'] = 'Idagdag ang Eleksyon';
+$lang['halalan_admin_edit_election_submit'] = 'Baguhin ang Eleksyon';
+
+// views/admin/blocks.php
+$lang['halalan_admin_blocks_label'] = 'Manage Blocks';
+$lang['halalan_admin_blocks_block'] = 'Block';
+$lang['halalan_admin_blocks_description'] = 'Description';
+$lang['halalan_admin_blocks_no_blocks'] = 'Walang blocks na nakita.';
+$lang['halalan_admin_blocks_add'] = 'Magdagdag ng Block';
+
+// views/admin/block.php
+$lang['halalan_admin_add_block_label'] = 'Magdagdag ng detalye ng block';
+$lang['halalan_admin_edit_block_label'] = 'Baguhin ang detalye ng block';
+$lang['halalan_admin_block_block'] = 'Block';
+$lang['halalan_admin_block_elections_positions'] = 'Elections / Positions';
+$lang['halalan_admin_add_block_submit'] = 'Idagdag ang Block';
+$lang['halalan_admin_edit_block_submit'] = 'Baguhin ang Block';
+
+/* End of file halalan_lang.php */
+/* Location: ./application/language/filipino/halalan_lang.php */
 ?>
