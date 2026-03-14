@@ -212,6 +212,7 @@ if ( ! function_exists('random_string'))
 			case 'numeric':
 			case 'nozero':
 			case 'alpha':
+			case 'alnumcapsnozero':
 				switch ($type)
 				{
 					case 'alpha':
@@ -225,6 +226,9 @@ if ( ! function_exists('random_string'))
 						break;
 					case 'nozero':
 						$pool = '123456789';
+						break;
+					case 'alnumcapsnozero':
+						$pool = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789';
 						break;
 				}
 				return substr(str_shuffle(str_repeat($pool, ceil($len / strlen($pool)))), 0, $len);
