@@ -109,10 +109,3 @@
 <?php endforeach; ?>
 
 <div class="clear"></div>
-<div class="paging">
-	<input type="hidden" name="election_id" value="<?php echo $election['id']; ?>" id="election_id" />
-	<input type="button" class="printVotes" value="<?php echo e('voter_votes_print_button'); ?>" />
-	<?php if ($settings['generate_image_trail']): ?>
-	<input type="button" class="downloadVotes" value="<?php echo e('voter_votes_download_button'); ?>" />
-	<?php endif; ?>
-</div>
