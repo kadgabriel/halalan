@@ -361,6 +361,18 @@ $lang['halalan_admin_blocks_description'] = 'Description';
 $lang['halalan_admin_blocks_no_blocks'] = 'No blocks found.';
 $lang['halalan_admin_blocks_add'] = 'Add Block';
 
+// controllers/admin/turnout.php
+$lang['halalan_admin_turnout_title'] = 'Voter Turnout';
+
+// views/admin/turnout.php
+$lang['halalan_admin_turnout_label'] = 'Voter Turnout Statistics';
+$lang['halalan_admin_turnout_block'] = 'Block';
+$lang['halalan_admin_turnout_total_voters'] = 'Total Voters';
+$lang['halalan_admin_turnout_voted'] = 'Voted';
+$lang['halalan_admin_turnout_percentage'] = 'Turnout %';
+$lang['halalan_admin_turnout_total'] = 'TOTAL';
+$lang['halalan_admin_turnout_no_data'] = 'No turnout data available.';
+
 // views/admin/block.php
 $lang['halalan_admin_add_block_label'] = 'Add Block Details';
 $lang['halalan_admin_edit_block_label'] = 'Edit Block Details';

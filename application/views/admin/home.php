@@ -10,6 +10,7 @@
 			<li><?php echo anchor('admin/candidates', e('admin_home_manage_candidates')); ?></li>
 			<li><?php echo anchor('admin/blocks', e('admin_home_manage_blocks')); ?></li>
 			<li><?php echo anchor('admin/voters', e('admin_home_manage_voters')); ?></li>
+			<li><?php echo anchor('admin/turnout', e('admin_turnout_title')); ?></li>
             <?php $uadmin = $this->session->userdata('admin');
 				$u = $uadmin['electionid'];
 			?>

@@ -430,6 +430,18 @@ $lang['halalan_admin_blocks_description'] = 'Description';
 $lang['halalan_admin_blocks_no_blocks'] = 'Walang blocks na nakita.';
 $lang['halalan_admin_blocks_add'] = 'Magdagdag ng Block';
 
+// controllers/admin/turnout.php
+$lang['halalan_admin_turnout_title'] = 'View Turnout';
+
+// views/admin/turnout.php
+$lang['halalan_admin_turnout_label'] = 'Statistics ng Bilang ng Bumoto';
+$lang['halalan_admin_turnout_block'] = 'Block';
+$lang['halalan_admin_turnout_total_voters'] = 'Kabuuang Botante';
+$lang['halalan_admin_turnout_voted'] = 'Bumoto';
+$lang['halalan_admin_turnout_percentage'] = 'Porsyento %';
+$lang['halalan_admin_turnout_total'] = 'KABUUAN';
+$lang['halalan_admin_turnout_no_data'] = 'Walang datos ng bilang ng bumoto.';
+
 // views/admin/block.php
 $lang['halalan_admin_add_block_label'] = 'Magdagdag ng detalye ng block';
 $lang['halalan_admin_edit_block_label'] = 'Baguhin ang detalye ng block';
