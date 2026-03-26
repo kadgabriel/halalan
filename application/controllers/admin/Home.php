@@ -231,7 +231,7 @@ class Home extends CI_Controller {
     
     function reset_db()
 	{
-		$this->Abmin->reset_db();
+		//$this->Abmin->reset_db();
         redirect('admin/home');
 	}
 
