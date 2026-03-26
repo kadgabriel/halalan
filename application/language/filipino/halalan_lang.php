@@ -1,4 +1,4 @@
-<?php
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 // common to controllers
 $lang['halalan_common_unauthorized'] = 'Kailangang nakapasok ka para makita ang pahina na ito.';
@@ -58,8 +58,8 @@ $lang['halalan_gate_result_no_candidates'] = 'Walang mga kandidato.';
 $lang['halalan_gate_results_no_candidates'] = 'Walang mga kandidato.';
 $lang['halalan_gate_result_submit_button'] = 'Update Page';
 $lang['halalan_gate_results_submit_button'] = 'Update Page';
-$lang['halalan_gate_result_reminder'] = 'Select at least one position then press <em>Update Page</em>.';
-$lang['halalan_gate_results_reminder'] = 'Select at least one position then press <em>Update Page</em>.';
+$lang['halalan_gate_result_reminder'] = 'Select at least one election then press <em>Update Page</em>.';
+$lang['halalan_gate_results_reminder'] = 'Select at least one election then press <em>Update Page</em>.';
 
 // views/gate/statistics.php
 $lang['halalan_gate_statistics_label'] = 'STATISTICS';
@@ -267,6 +267,7 @@ $lang['halalan_admin_home_manage_elections'] = 'Manage Elections';
 $lang['halalan_admin_home_manage_parties'] = 'Manage Parties';
 $lang['halalan_admin_home_manage_positions'] = 'Manage Positions';
 $lang['halalan_admin_home_manage_voters'] = 'Manage Voters';
+$lang['halalan_admin_home_manage_blocks'] = 'Manage Blocks';
 $lang['halalan_admin_home_left_label_too'] = 'Regeneration Box';
 $lang['halalan_admin_home_email'] = 'Email';
 $lang['halalan_admin_home_username'] = 'Username';
