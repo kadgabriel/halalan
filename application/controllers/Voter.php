@@ -789,6 +789,7 @@ class Voter extends CI_Controller {
 			$voted['image_trail_hash'] = $hash;
 			$this->Voted->update($voted, $election_id, $this->voter['id']);
 			rename($path . $name, $path . $election_id . '_' . $hash . '_' . $this->voter['id'] . '.png');
+			$this->session->set_flashdata('vpt_hash', $hash);
 		}
 	}
 
