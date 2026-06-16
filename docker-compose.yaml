@@ -1,0 +1,39 @@
+version: "3.1"
+services:
+    www:
+        image: halalan:latest
+        ports: 
+            - "80:80"
+        volumes:
+            - ./halalan:/var/www/html/halalan
+        links:
+            - db
+        networks:
+            - default
+        user: "1000:1000"
+    db:
+        image: mysql:8.0
+        ports: 
+            - "3306:3306"
+        command: --default-authentication-plugin=mysql_native_password
+        environment:
+            MYSQL_DATABASE: halalan
+            MYSQL_USER: halalan_user
+            MYSQL_PASSWORD: halalan_pass
+            MYSQL_ROOT_PASSWORD: password 
+        volumes:
+            - ./dump:/docker-entrypoint-initdb.d
+            - ./conf:/etc/mysql/conf.d
+            - ./data:/var/lib/mysql
+        networks:
+            - default
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        links: 
+            - db:db
+        ports:
+            - "127.0.0.1:8081:80"
+        environment:
+            MYSQL_USER: halalan_user
+            MYSQL_PASSWORD: halalan_pass
+            MYSQL_ROOT_PASSWORD: password 
